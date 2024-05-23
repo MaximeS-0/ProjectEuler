@@ -5,4 +5,4 @@ add_executable(tests_Fibonacci
 
 			   test_main.cpp
 	           "Fibonacci/test_Fibonacci.cpp"
-)
+			   "MathOperation/test_EvenNumberInList.cpp")
