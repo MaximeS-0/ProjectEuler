@@ -3,9 +3,9 @@
 
 #include "../src/Fibonacci/fibonacci.hpp"
 #include "../src/MathOperation/EvenNumberInList.hpp"
+#include "../src/MathOperation/SumNumberInList.hpp"
 
 #include <vector>
-#include <numeric>
 
 
 TEST_CASE("Test_solution") {
@@ -16,11 +16,12 @@ TEST_CASE("Test_solution") {
 
 
 	std::vector<int> fibonacci_10First = fibonacci(100);
-	std::vector<int> fibonacci_evenNumber = getEvenNumber(fibonacci_10First);
-
-
 	REQUIRE(fibonacci_10First == firstTenNumber);
 
+	std::vector<int> fibonacci_evenNumber = getEvenNumber(fibonacci_10First);
+	REQUIRE(fibonacci_evenNumber == filterEvenNumber);
 
+	int sumOfList = sumNumberIn(fibonacci_evenNumber);
+	REQUIRE(sumOfList == sum);
 
 }
