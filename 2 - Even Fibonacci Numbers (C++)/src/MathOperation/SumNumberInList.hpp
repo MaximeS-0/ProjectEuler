@@ -1,3 +1,6 @@
+#ifndef EVEN_NUMBER_IN_LIST_H
+#define EVEN_NUMBER_IN_LIST_H
+
 #include <vector>
 
 std::vector<int> getEvenNumber(std::vector<int> numberVector) {
@@ -15,3 +18,6 @@ std::vector<int> getEvenNumber(std::vector<int> numberVector) {
 	return evenNumberVector;
 
 }
+
+
+#endif
