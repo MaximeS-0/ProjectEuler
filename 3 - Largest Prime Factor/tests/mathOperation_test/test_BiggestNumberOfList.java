@@ -14,14 +14,14 @@ import mathOperation.FactorOf;
 
 class test_BiggestNumberOfList {
 
-	ArrayList<Integer> numberList;
-	int result;
+	ArrayList<Long> numberList;
+	long result;
 	
 	
 	
 	@BeforeEach
 	void setUp() {
-		numberList = new ArrayList<Integer>();
+		numberList = new ArrayList<Long>();
 		result = 0;
 	}
 	
@@ -37,7 +37,7 @@ class test_BiggestNumberOfList {
 	
 	@Test
 	void oneNumber() {
-		numberList.add(1);
+		numberList.add(1L);
 		
 		result = BiggestNumberOfList.biggestNumberOfAList(numberList);
 		assertEquals(result, 1);
@@ -45,9 +45,9 @@ class test_BiggestNumberOfList {
 	
 	@Test
 	void multipleNumber() {
-		numberList.add(5);
-		numberList.add(8);
-		numberList.add(3);
+		numberList.add(5L);
+		numberList.add(8L);
+		numberList.add(3L);
 		
 		result = BiggestNumberOfList.biggestNumberOfAList(numberList);
 		assertEquals(result, 8);
@@ -55,9 +55,9 @@ class test_BiggestNumberOfList {
 	
 	@Test
 	void negativeNumber() {
-		numberList.add(-5);
-		numberList.add(-8);
-		numberList.add(-3);
+		numberList.add(-5L);
+		numberList.add(-8L);
+		numberList.add(-3L);
 		
 		result = BiggestNumberOfList.biggestNumberOfAList(numberList);
 		assertEquals(result, -3);
@@ -66,9 +66,9 @@ class test_BiggestNumberOfList {
 	
 	@Test
 	void mixNumber() {
-		numberList.add(5);
-		numberList.add(-8);
-		numberList.add(-3);
+		numberList.add(5L);
+		numberList.add(-8L);
+		numberList.add(-3L);
 		
 		result = BiggestNumberOfList.biggestNumberOfAList(numberList);
 		assertEquals(result, 5);

@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class BiggestNumberOfList {
 	
-	static public int biggestNumberOfAList(ArrayList<Integer> numberList) {
+	static public Long biggestNumberOfAList(ArrayList<Long> numberList) {
 		
 		if (numberList == null) {
 			throw new NullPointerException("No array");
@@ -15,9 +15,9 @@ public class BiggestNumberOfList {
 		}
 		
 		
-		int biggestNumber = numberList.get(0);
+		Long biggestNumber = numberList.get(0);
 		
-		for(int number: numberList) {
+		for(long number: numberList) {
 			if (number > biggestNumber) {
 				biggestNumber = number;
 			}

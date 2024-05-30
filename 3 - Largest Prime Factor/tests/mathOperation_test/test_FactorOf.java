@@ -14,11 +14,11 @@ import mathOperation.FactorOf;
 
 class test_FactorOf {
 	
-	ArrayList<Integer> resultFactor;
+	ArrayList<Long> resultFactor;
 	
 	@BeforeEach
 	void setUp() {
-		resultFactor = new ArrayList<Integer>();
+		resultFactor = new ArrayList<Long>();
 	}
 	
 	
@@ -36,7 +36,7 @@ class test_FactorOf {
 	void test_number1() {
 		FactorOf number = new FactorOf(1);
 		
-		resultFactor.add(1);
+		resultFactor.add(1L);
 		
 		assertEquals(resultFactor, number.getFactor());
 		assertFalse(number.isPrime());
@@ -46,8 +46,8 @@ class test_FactorOf {
 	void test_number2() {
 		FactorOf number = new FactorOf(2);
 		
-		resultFactor.add(1);
-		resultFactor.add(2);
+		resultFactor.add(1L);
+		resultFactor.add(2L);
 		
 		assertEquals(resultFactor, number.getFactor());
 		assertTrue(number.isPrime());
@@ -57,9 +57,9 @@ class test_FactorOf {
 	void test_number4() {
 		FactorOf number = new FactorOf(4);
 		
-		resultFactor.add(1);
-		resultFactor.add(2);
-		resultFactor.add(4);
+		resultFactor.add(1L);
+		resultFactor.add(2L);
+		resultFactor.add(4L);
 		
 		assertEquals(resultFactor, number.getFactor());
 		assertFalse(number.isPrime());
@@ -69,10 +69,10 @@ class test_FactorOf {
 	void test_number10() {
 		FactorOf number = new FactorOf(10);
 		
-		resultFactor.add(1);
-		resultFactor.add(2);
-		resultFactor.add(5);
-		resultFactor.add(10);
+		resultFactor.add(1L);
+		resultFactor.add(2L);
+		resultFactor.add(5L);
+		resultFactor.add(10L);
 		
 		assertEquals(resultFactor, number.getFactor());
 		assertFalse(number.isPrime());
@@ -82,8 +82,8 @@ class test_FactorOf {
 	void test_number13() {
 		FactorOf number = new FactorOf(13);
 		
-		resultFactor.add(1);
-		resultFactor.add(13);
+		resultFactor.add(1L);
+		resultFactor.add(13L);
 		
 		assertEquals(resultFactor, number.getFactor());
 		assertTrue(number.isPrime());

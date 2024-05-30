@@ -5,7 +5,7 @@ import java.util.ArrayList;
 public class PrimeFactor {
 
 	
-	static public ArrayList<Integer> PrimeFactorOf(int number) {
+	static public ArrayList<Long> PrimeFactorOf(long number) {
 		if (number <= 0) {
 			throw new ArithmeticException("Number should be bigger than 0");
 		}
@@ -15,11 +15,11 @@ public class PrimeFactor {
 	}
 	
 		
-	private static ArrayList<Integer> calcultePrimeFactor(int number_) {
-		ArrayList<Integer> listOfFactor = new FactorOf(number_).getFactor();
-		ArrayList<Integer> listOfPrimeFactor = new ArrayList<Integer>();
+	private static ArrayList<Long> calcultePrimeFactor(long number_) {
+		ArrayList<Long> listOfFactor = new FactorOf(number_).getFactor();
+		ArrayList<Long> listOfPrimeFactor = new ArrayList<Long>();
 		
-		for (int number: listOfFactor){
+		for (long number: listOfFactor){
 			if (new FactorOf(number).isPrime()) {
 				listOfPrimeFactor.add(number);
 			}
